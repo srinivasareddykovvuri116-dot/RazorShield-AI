@@ -557,10 +557,7 @@ data/processed/
 
 # Project Structure
 
-
-
-
-
+```text
 RazorShield-AI/
 │
 ├── config/
@@ -576,29 +573,33 @@ RazorShield-AI/
 │   │   └── transactions.csv
 │   │
 │   └── processed/
+│       ├── features.csv
+│       ├── temporal_features.csv
+│       ├── target.csv
+│       ├── temporal_target.csv
+│       ├── threshold_analysis.csv
+│       ├── gradient_threshold_analysis.csv
+│       ├── gradient_operating_points.csv
 │       ├── calibration_analysis.csv
 │       ├── calibration_curve.png
-│       ├── features.csv
+│       ├── gradient_boosting_calibration.csv
 │       ├── feature_importance.csv
 │       ├── feature_importance_top10.png
-│       ├── gradient_boosting_calibration.csv
 │       ├── gradient_boosting_feature_importance.csv
-│       ├── gradient_operating_points.csv
-│       ├── gradient_threshold_analysis.csv
 │       ├── graph_cluster_features.csv
 │       ├── out_of_time_validation.csv
-│       ├── target.csv
-│       ├── temporal_features.csv
-│       ├── temporal_target.csv
-│       ├── temporal_validation_comparison.csv
-│       └── threshold_analysis.csv
+│       └── temporal_validation_comparison.csv
 │
 ├── docs/
 │   └── screenshots/
 │       ├── decision-history.png
 │       ├── fraud-attack.png
 │       ├── review-case.png
-│       ├── risk-overview.png
+│       ├── risk-overview1.png
+│       ├── risk-overview2.png
+│       ├── risk-overview3.png
+│       ├── risk-overview4.png
+│       ├── risk-overview5.png
 │       ├── risk-signals.png
 │       ├── safe-payment.png
 │       └── transaction-analysis.png
@@ -649,9 +650,9 @@ RazorShield-AI/
 │       ├── test_api.py
 │       └── test_risk_engine.py
 │
+├── .gitignore
 ├── README.md
 └── requirements.txt
-
 
 ---
 
