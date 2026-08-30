@@ -1,0 +1,3084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RazorShield AI — Risk Manager</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     APP
+====================================================== -->
+
+<div class="app">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                RS
+            </div>
+
+            <div>
+
+                <h1>
+                    RazorShield
+                </h1>
+
+                <span>
+                    AI Risk Manager
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <nav class="navigation">
+
+            <button
+                class="nav-item active"
+                type="button"
+                data-section="overview"
+            >
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Risk Overview
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+                data-section="analysis"
+            >
+
+                <span class="nav-icon">
+                    ↯
+                </span>
+
+                <span>
+                    Transaction Analysis
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+                data-section="signals"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Risk Signals
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+                data-section="history"
+            >
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                <span>
+                    Decision History
+                </span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- =================================================
+             SIDEBAR FOOTER
+        ================================================== -->
+
+        <div class="sidebar-footer">
+
+            <div class="model-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        Model Online
+                    </strong>
+
+                    <small>
+                        Gradient Boosting
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    PAYMENT SECURITY
+                </p>
+
+                <h2 id="page-title">
+                    Risk Overview
+                </h2>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="api-status">
+
+                    <span class="status-dot"></span>
+
+                    API Connected
+
+                </div>
+
+                <div class="date-display">
+                    Live Analysis
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             RISK OVERVIEW SECTION
+        ================================================== -->
+
+        <section
+            id="overview-section"
+            class="page-section"
+        >
+
+
+            <!-- =================================================
+                 KPI CARDS
+            ================================================== -->
+
+            <section class="kpi-grid">
+
+
+                <!-- MODEL -->
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        Model
+                    </div>
+
+                    <div class="kpi-value">
+                        Gradient Boosting
+                    </div>
+
+                    <div class="kpi-subtext">
+                        Champion model
+                    </div>
+
+                </div>
+
+
+                <!-- PR-AUC -->
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        PR-AUC
+                    </div>
+
+                    <div class="kpi-value">
+                        89.79%
+                    </div>
+
+                    <div class="kpi-subtext">
+                        20% stratified held-out test set
+                    </div>
+
+                </div>
+
+
+                <!-- BLOCK THRESHOLD -->
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        Block Threshold
+                    </div>
+
+                    <div class="kpi-value">
+                        25%
+                    </div>
+
+                    <div class="kpi-subtext">
+                        Live risk policy
+                    </div>
+
+                </div>
+
+
+                <!-- FRAUD CAPTURE -->
+
+                <div class="kpi-card">
+
+                    <div class="kpi-label">
+                        Fraud Capture
+                    </div>
+
+                    <div class="kpi-value">
+                        85.88%
+                    </div>
+
+                    <div class="kpi-subtext">
+                        At selected 25% operating point
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 HELD-OUT MODEL EVALUATION
+            ================================================== -->
+
+            <section class="evaluation-section">
+
+
+                <!-- EVALUATION HEADER -->
+
+                <div class="evaluation-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            HELD-OUT MODEL EVALUATION
+                        </p>
+
+                        <h3>
+                            Detection Performance
+                        </h3>
+
+                        <p class="evaluation-description">
+                            Evaluation on the 20% stratified held-out
+                            test set at the selected 25% operating point.
+                            These metrics are the official threshold
+                            validation results and are separate from
+                            live demo decisions.
+                        </p>
+
+                    </div>
+
+
+                    <span class="evaluation-badge">
+                        SELECTED POLICY · 25%
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PERFORMANCE METRICS
+                ================================================== -->
+
+                <div class="evaluation-grid">
+
+
+                    <!-- PRECISION -->
+
+                    <div class="evaluation-card">
+
+                        <span class="evaluation-label">
+                            Precision
+                        </span>
+
+                        <strong>
+                            79.98%
+                        </strong>
+
+                        <small>
+                            Positive decisions that were fraud
+                        </small>
+
+                    </div>
+
+
+                    <!-- RECALL -->
+
+                    <div class="evaluation-card">
+
+                        <span class="evaluation-label">
+                            Recall
+                        </span>
+
+                        <strong>
+                            85.88%
+                        </strong>
+
+                        <small>
+                            Fraud transactions captured
+                        </small>
+
+                    </div>
+
+
+                    <!-- FALSE POSITIVE RATE -->
+
+                    <div class="evaluation-card">
+
+                        <span class="evaluation-label">
+                            False Positive Rate
+                        </span>
+
+                        <strong>
+                            0.90%
+                        </strong>
+
+                        <small>
+                            Legitimate transactions flagged
+                        </small>
+
+                    </div>
+
+
+                    <!-- F1 -->
+
+                    <div class="evaluation-card">
+
+                        <span class="evaluation-label">
+                            F1 Score
+                        </span>
+
+                        <strong>
+                            82.82%
+                        </strong>
+
+                        <small>
+                            Precision / recall balance
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     BUSINESS IMPACT
+                ================================================== -->
+
+                <div class="impact-section">
+
+                    <div class="section-title">
+                        BUSINESS IMPACT
+                    </div>
+
+
+                    <div class="impact-grid">
+
+
+                        <!-- FRAUD VOLUME -->
+
+                        <div class="impact-card fraud-impact">
+
+                            <div class="impact-icon">
+                                ₹
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Fraud Volume Captured
+                                </span>
+
+                                <strong>
+                                    ₹59.55 L
+                                </strong>
+
+                                <small>
+                                    Fraud transaction volume
+                                    captured by the model
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LEGITIMATE VOLUME -->
+
+                        <div class="impact-card fp-impact">
+
+                            <div class="impact-icon">
+                                !
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Legitimate Volume Flagged
+                                </span>
+
+                                <strong>
+                                    ₹13.43 L
+                                </strong>
+
+                                <small>
+                                    Legitimate transaction volume
+                                    affected by false positives
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- COST ASSUMPTION -->
+
+                    <div class="evaluation-note cost-note">
+
+                        <span class="note-icon">
+                            i
+                        </span>
+
+                        <p>
+
+                            <strong>
+                                Cost assumption:
+                            </strong>
+
+                            ₹ figures represent transaction volume
+                            affected or captured in the held-out
+                            evaluation set, not the complete
+                            downstream business cost of fraud,
+                            customer friction, chargebacks, or
+                            operational review.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CONFUSION MATRIX
+                ================================================== -->
+
+                <div class="matrix-section">
+
+                    <div class="section-title">
+                        CONFUSION MATRIX
+                    </div>
+
+
+                    <div class="matrix-grid">
+
+
+                        <!-- TRUE NEGATIVE -->
+
+                        <div class="matrix-card true-negative">
+
+                            <span>
+                                TRUE NEGATIVES
+                            </span>
+
+                            <strong>
+                                19,028
+                            </strong>
+
+                            <small>
+                                Legitimate transactions allowed
+                            </small>
+
+                        </div>
+
+
+                        <!-- FALSE POSITIVE -->
+
+                        <div class="matrix-card false-positive">
+
+                            <span>
+                                FALSE POSITIVES
+                            </span>
+
+                            <strong>
+                                172
+                            </strong>
+
+                            <small>
+                                Legitimate transactions flagged
+                            </small>
+
+                        </div>
+
+
+                        <!-- FALSE NEGATIVE -->
+
+                        <div class="matrix-card false-negative">
+
+                            <span>
+                                FALSE NEGATIVES
+                            </span>
+
+                            <strong>
+                                113
+                            </strong>
+
+                            <small>
+                                Fraud transactions missed
+                            </small>
+
+                        </div>
+
+
+                        <!-- TRUE POSITIVE -->
+
+                        <div class="matrix-card true-positive">
+
+                            <span>
+                                TRUE POSITIVES
+                            </span>
+
+                            <strong>
+                                687
+                            </strong>
+
+                            <small>
+                                Fraud transactions captured
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     THRESHOLD TRADE-OFF
+                ================================================== -->
+
+                <section class="threshold-analysis">
+
+                    <div class="section-title">
+                        THRESHOLD TRADE-OFF
+                    </div>
+
+
+                    <div class="threshold-header">
+
+                        <div>
+
+                            <h3>
+                                Operating Point Comparison
+                            </h3>
+
+                            <p>
+                                Precision and recall across selected
+                                risk thresholds on the held-out
+                                evaluation set.
+                            </p>
+
+                        </div>
+
+
+                        <div class="threshold-selected">
+
+                            <span>
+                                SELECTED OPERATING POINT
+                            </span>
+
+                            <strong>
+                                25%
+                            </strong>
+
+                            <small>
+                                ≥85% fraud capture · ≤2% FPR
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         THRESHOLD TABLE
+                    ================================================== -->
+
+                    <div class="threshold-table-container">
+
+                        <table class="threshold-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Threshold
+                                    </th>
+
+                                    <th>
+                                        Precision
+                                    </th>
+
+                                    <th>
+                                        Recall
+                                    </th>
+
+                                    <th>
+                                        False Positive Rate
+                                    </th>
+
+                                    <th>
+                                        F1 Score
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <!-- 10% -->
+
+                                <tr>
+
+                                    <td>
+                                        10%
+                                    </td>
+
+                                    <td>
+                                        64.75%
+                                    </td>
+
+                                    <td>
+                                        90.25%
+                                    </td>
+
+                                    <td>
+                                        2.05%
+                                    </td>
+
+                                    <td>
+                                        75.40%
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- 15% -->
+
+                                <tr>
+
+                                    <td>
+                                        15%
+                                    </td>
+
+                                    <td>
+                                        72.62%
+                                    </td>
+
+                                    <td>
+                                        88.50%
+                                    </td>
+
+                                    <td>
+                                        1.39%
+                                    </td>
+
+                                    <td>
+                                        79.77%
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- 20% -->
+
+                                <tr>
+
+                                    <td>
+                                        20%
+                                    </td>
+
+                                    <td>
+                                        77.31%
+                                    </td>
+
+                                    <td>
+                                        86.88%
+                                    </td>
+
+                                    <td>
+                                        1.06%
+                                    </td>
+
+                                    <td>
+                                        81.86%
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- SELECTED 25% -->
+
+                                <tr class="selected-threshold-row">
+
+                                    <td>
+
+                                        <strong>
+                                            25%
+                                        </strong>
+
+                                        <span class="selected-badge">
+                                            SELECTED
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            79.98%
+                                        </strong>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            85.88%
+                                        </strong>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            0.90%
+                                        </strong>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            82.82%
+                                        </strong>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- 30% -->
+
+                                <tr>
+
+                                    <td>
+                                        30%
+                                    </td>
+
+                                    <td>
+                                        82.02%
+                                    </td>
+
+                                    <td>
+                                        83.25%
+                                    </td>
+
+                                    <td>
+                                        0.76%
+                                    </td>
+
+                                    <td>
+                                        82.63%
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- 35% -->
+
+                                <tr>
+
+                                    <td>
+                                        35%
+                                    </td>
+
+                                    <td>
+                                        84.06%
+                                    </td>
+
+                                    <td>
+                                        81.75%
+                                    </td>
+
+                                    <td>
+                                        0.65%
+                                    </td>
+
+                                    <td>
+                                        82.89%
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- 50% COMPARISON -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <strong>
+                                            50%
+                                        </strong>
+
+                                        <span class="selected-badge">
+                                            COMPARISON
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            88.40%
+                                        </strong>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            77.13%
+                                        </strong>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            0.42%
+                                        </strong>
+
+                                    </td>
+
+                                    <td>
+
+                                        <strong>
+                                            82.38%
+                                        </strong>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         THRESHOLD EXPLANATION
+                    ================================================== -->
+
+                    <div class="threshold-explanation">
+
+    <strong>Why 25%?</strong>
+
+    <p>
+        Both 20% and 25% satisfy the project's validation
+        constraints of at least <strong>85% fraud capture</strong>
+        and no more than <strong>2% false-positive rate</strong>.
+        We selected 25% because it improves precision from
+        <strong>77.31%</strong> to <strong>79.98%</strong>,
+        reduces the false-positive rate from
+        <strong>1.06%</strong> to <strong>0.90%</strong>,
+        and improves F1 from
+        <strong>81.86%</strong> to <strong>82.82%</strong>,
+        while recall decreases by only 1 percentage point,
+        from <strong>86.88%</strong> to <strong>85.88%</strong>.
+    </p>
+
+    <p>
+        This represents RazorShield's preferred operational
+        balance on the held-out evaluation set, not a universal
+        payment-industry rule.
+    </p>
+
+</div>
+
+
+
+                    <!-- =================================================
+                         TRADE-OFF SUMMARY
+                    ================================================== -->
+
+                    <div class="threshold-summary">
+
+
+                        <div class="threshold-summary-item">
+
+                            <span>
+                                Lower Threshold
+                            </span>
+
+                            <strong>
+                                More Fraud Captured
+                            </strong>
+
+                            <small>
+                                Higher recall, but more legitimate
+                                transactions may be flagged.
+                            </small>
+
+                        </div>
+
+
+                        <div class="threshold-summary-item">
+
+                            <span>
+                                25% Threshold
+                            </span>
+
+                            <strong>
+                                Official Policy Point
+                            </strong>
+
+                            <small>
+                                85.88% recall and 0.90% false-positive
+                                rate; improves precision and F1 versus
+                                the 20% operating point while meeting
+                                the validation constraints.
+                            </small>
+
+                        </div>
+
+
+                        <div class="threshold-summary-item">
+
+                            <span>
+                                50% Comparison
+                            </span>
+
+                            <strong>
+                                Higher Precision
+                            </strong>
+
+                            <small>
+                                88.40% precision and 0.42% false-positive
+                                rate, with 77.13% fraud capture.
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     CALIBRATION SANITY CHECK
+                ================================================== -->
+
+                <section class="calibration-section">
+
+                    <div class="section-title">
+                        CALIBRATION SANITY CHECK
+                    </div>
+
+
+                    <div class="calibration-header">
+
+                        <div>
+
+                            <h3>
+                                Predicted Risk vs Observed Fraud
+                            </h3>
+
+                            <p>
+                                Calibration check on the same 20%
+                                stratified held-out evaluation set
+                                used for model validation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="calibration-badge">
+                            HELD-OUT TEST SET
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CALIBRATION TABLE -->
+
+                    <div class="calibration-table-container">
+
+                        <table class="calibration-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Predicted Risk
+                                    </th>
+
+                                    <th>
+                                        Samples
+                                    </th>
+
+                                    <th>
+                                        Mean Predicted Risk
+                                    </th>
+
+                                    <th>
+                                        Observed Fraud Rate
+                                    </th>
+
+                                    <th>
+                                        Gap
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        0–10%
+                                    </td>
+
+                                    <td>
+                                        18,885
+                                    </td>
+
+                                    <td>
+                                        0.48%
+                                    </td>
+
+                                    <td>
+                                        0.41%
+                                    </td>
+
+                                    <td>
+                                        0.06%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        10–20%
+                                    </td>
+
+                                    <td>
+                                        216
+                                    </td>
+
+                                    <td>
+                                        13.86%
+                                    </td>
+
+                                    <td>
+                                        12.50%
+                                    </td>
+
+                                    <td>
+                                        1.36%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        20–30%
+                                    </td>
+
+                                    <td>
+                                        87
+                                    </td>
+
+                                    <td>
+                                        25.16%
+                                    </td>
+
+                                    <td>
+                                        33.33%
+                                    </td>
+
+                                    <td>
+                                        8.17%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        30–40%
+                                    </td>
+
+                                    <td>
+                                        66
+                                    </td>
+
+                                    <td>
+                                        34.96%
+                                    </td>
+
+                                    <td>
+                                        39.39%
+                                    </td>
+
+                                    <td>
+                                        4.43%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        40–50%
+                                    </td>
+
+                                    <td>
+                                        48
+                                    </td>
+
+                                    <td>
+                                        44.51%
+                                    </td>
+
+                                    <td>
+                                        47.92%
+                                    </td>
+
+                                    <td>
+                                        3.41%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        50–60%
+                                    </td>
+
+                                    <td>
+                                        53
+                                    </td>
+
+                                    <td>
+                                        54.71%
+                                    </td>
+
+                                    <td>
+                                        58.49%
+                                    </td>
+
+                                    <td>
+                                        3.78%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        60–70%
+                                    </td>
+
+                                    <td>
+                                        39
+                                    </td>
+
+                                    <td>
+                                        65.50%
+                                    </td>
+
+                                    <td>
+                                        64.10%
+                                    </td>
+
+                                    <td>
+                                        1.40%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        70–80%
+                                    </td>
+
+                                    <td>
+                                        73
+                                    </td>
+
+                                    <td>
+                                        75.61%
+                                    </td>
+
+                                    <td>
+                                        72.60%
+                                    </td>
+
+                                    <td>
+                                        3.01%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        80–90%
+                                    </td>
+
+                                    <td>
+                                        90
+                                    </td>
+
+                                    <td>
+                                        85.38%
+                                    </td>
+
+                                    <td>
+                                        84.44%
+                                    </td>
+
+                                    <td>
+                                        0.93%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        90–100%
+                                    </td>
+
+                                    <td>
+                                        443
+                                    </td>
+
+                                    <td>
+                                        97.02%
+                                    </td>
+
+                                    <td>
+                                        97.52%
+                                    </td>
+
+                                    <td>
+                                        0.50%
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- CALIBRATION EXPLANATION -->
+
+                    <div class="calibration-explanation">
+
+                        <span class="note-icon">
+                            i
+                        </span>
+
+                        <p>
+
+                            <strong>
+                                Interpretation:
+                            </strong>
+
+                            Predicted risk generally tracks the observed
+                            fraud rate across the held-out test set.
+                            The largest observed deviation occurs in the
+                            20–30% risk bucket, where the mean predicted
+                            risk is 25.16% and the observed fraud rate
+                            is 33.33%, producing an 8.17 percentage-point
+                            gap.
+
+                            This is a descriptive calibration sanity check
+                            and is not used to recalibrate the production
+                            model.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- CALIBRATION NOTE -->
+
+                    <div class="evaluation-note">
+
+                        <span class="note-icon">
+                            i
+                        </span>
+
+                        <p>
+
+                            Calibration results are computed from held-out
+                            predictions and are separate from live
+                            transaction decisions and demo history.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ============================================================
+                     TEMPORAL VALIDATION
+                ============================================================= -->
+
+                <section class="temporal-validation-section">
+
+
+                    <div class="section-title">
+                        TEMPORAL VALIDATION
+                    </div>
+
+
+                    <div class="temporal-validation-header">
+
+                        <div>
+
+                            <h3>
+                                Chronological Performance Check
+                            </h3>
+
+                            <p>
+                                Temporal-safe Logistic Regression baseline
+                                evaluated across sequential validation periods.
+                            </p>
+
+                        </div>
+
+
+                        <div class="temporal-badge">
+                            OUT-OF-TIME TEST
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SPLIT OVERVIEW -->
+
+                    <div class="temporal-split-grid">
+
+
+                        <div class="temporal-split-card">
+
+                            <div class="temporal-split-label">
+                                TRAINING
+                            </div>
+
+                            <div class="temporal-split-value">
+                                70,000
+                            </div>
+
+                            <div class="temporal-split-description">
+                                70% of transactions
+                            </div>
+
+                        </div>
+
+
+                        <div class="temporal-split-card">
+
+                            <div class="temporal-split-label">
+                                VALIDATION
+                            </div>
+
+                            <div class="temporal-split-value">
+                                15,000
+                            </div>
+
+                            <div class="temporal-split-description">
+                                Intermediate future period
+                            </div>
+
+                        </div>
+
+
+                        <div class="temporal-split-card">
+
+                            <div class="temporal-split-label">
+                                OUT-OF-TIME
+                            </div>
+
+                            <div class="temporal-split-value">
+                                15,000
+                            </div>
+
+                            <div class="temporal-split-description">
+                                Final unseen period
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PERFORMANCE TABLE -->
+
+                    <div class="temporal-table-container">
+
+                        <table class="temporal-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Metric
+                                    </th>
+
+                                    <th>
+                                        Validation
+                                    </th>
+
+                                    <th>
+                                        Out-of-Time
+                                    </th>
+
+                                    <th>
+                                        Change
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Precision
+                                    </td>
+
+                                    <td>
+                                        39.65%
+                                    </td>
+
+                                    <td>
+                                        41.16%
+                                    </td>
+
+                                    <td>
+                                        +1.51 pp
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Recall
+                                    </td>
+
+                                    <td>
+                                        93.26%
+                                    </td>
+
+                                    <td>
+                                        92.70%
+                                    </td>
+
+                                    <td>
+                                        −0.57 pp
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        F1 Score
+                                    </td>
+
+                                    <td>
+                                        55.64%
+                                    </td>
+
+                                    <td>
+                                        57.00%
+                                    </td>
+
+                                    <td>
+                                        +1.36 pp
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        ROC-AUC
+                                    </td>
+
+                                    <td>
+                                        98.30%
+                                    </td>
+
+                                    <td>
+                                        98.36%
+                                    </td>
+
+                                    <td>
+                                        +0.05 pp
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        PR-AUC
+                                    </td>
+
+                                    <td>
+                                        84.00%
+                                    </td>
+
+                                    <td>
+                                        86.41%
+                                    </td>
+
+                                    <td>
+                                        +2.41 pp
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        False Positive Rate
+                                    </td>
+
+                                    <td>
+                                        5.70%
+                                    </td>
+
+                                    <td>
+                                        5.81%
+                                    </td>
+
+                                    <td>
+                                        +0.11 pp
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- VALIDATION EXPLANATION -->
+
+                    <div class="temporal-validation-note">
+
+                        <span class="note-icon">
+                            i
+                        </span>
+
+                        <p>
+
+                            <strong>
+                                Interpretation:
+                            </strong>
+
+                            Performance remained broadly consistent between
+                            the chronological validation and final out-of-time
+                            periods. PR-AUC increased from
+                            <strong>84.00%</strong> to
+                            <strong>86.41%</strong>, while recall changed by only
+                            <strong>−0.57 percentage points</strong>.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- METHODOLOGY NOTE -->
+
+                    <div class="evaluation-note">
+
+                        <span class="note-icon">
+                            i
+                        </span>
+
+                        <p>
+
+                            This temporal validation uses the Logistic Regression
+                            baseline at a 0.50 classification threshold. It is
+                            separate from the Gradient Boosting champion model
+                            and its selected 25% operating point.
+
+                        </p>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     MODEL EXPLAINABILITY
+                ================================================== -->
+
+                <section class="feature-importance-section">
+
+                    <div class="section-title">
+                        MODEL EXPLAINABILITY
+                    </div>
+
+                    <div class="feature-importance-header">
+
+                        <div>
+                            <h3>Top Risk Drivers</h3>
+                            <p>Top features ranked by permutation importance on the held-out evaluation set.</p>
+                        </div>
+
+                        <div class="feature-importance-badge">
+                            HELD-OUT TEST SET
+                        </div>
+
+                    </div>
+
+                    <div class="feature-importance-card">
+
+                        <div class="feature-importance-chart">
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">01</span><span class="feature-name">Amount vs Customer History</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:100%;"></div></div>
+                                <span class="feature-value">0.2137</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">02</span><span class="feature-name">New Location</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:85.6%;"></div></div>
+                                <span class="feature-value">0.1829</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">03</span><span class="feature-name">IP Customer Count Before</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:57.4%;"></div></div>
+                                <span class="feature-value">0.1227</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">04</span><span class="feature-name">Device-IP Transactions</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:39.3%;"></div></div>
+                                <span class="feature-value">0.0841</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">05</span><span class="feature-name">Device Customer Count Before</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:28.9%;"></div></div>
+                                <span class="feature-value">0.0618</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">06</span><span class="feature-name">Amount Difference From History</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:13.4%;"></div></div>
+                                <span class="feature-value">0.0286</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">07</span><span class="feature-name">Customer Transactions Before</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:5.5%;"></div></div>
+                                <span class="feature-value">0.0118</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">08</span><span class="feature-name">Customer Amount Sum Before</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:4.2%;"></div></div>
+                                <span class="feature-value">0.0090</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">09</span><span class="feature-name">IP Transactions Before</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:1.9%;"></div></div>
+                                <span class="feature-value">0.0040</span>
+                            </div>
+
+                            <div class="feature-row">
+                                <div class="feature-info"><span class="feature-rank">10</span><span class="feature-name">Network Connections Before</span></div>
+                                <div class="feature-bar-container"><div class="feature-bar" style="width:1.8%;"></div></div>
+                                <span class="feature-value">0.0038</span>
+                            </div>
+
+                        </div>
+
+                        <div class="feature-importance-note">
+                            <span class="note-icon">i</span>
+                            <p>Permutation importance measures the change in held-out PR-AUC when a feature's values are randomly shuffled. Larger values indicate a greater contribution to model discrimination. These values are model-analysis results and are not individual transaction risk scores.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     EVALUATION NOTE
+                ================================================== -->
+
+                <div class="evaluation-note">
+
+                    <span class="note-icon">
+                        i
+                    </span>
+
+                    <p>
+
+                        Metrics are computed on the held-out
+                        evaluation set and are separate from
+                        live demo transaction history.
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 END RISK OVERVIEW
+            ================================================== -->
+
+        </section>
+
+
+
+        <!-- =================================================
+             TRANSACTION ANALYSIS SECTION
+        ================================================== -->
+
+        <section
+            id="analysis-section"
+            class="workspace"
+        >
+
+
+            <!-- =================================================
+                 TRANSACTION FORM
+            ================================================== -->
+
+            <div class="panel transaction-panel">
+
+
+                <!-- PANEL HEADER -->
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            REAL-TIME ANALYSIS
+                        </p>
+
+                        <h3>
+                            Analyze Transaction
+                        </h3>
+
+                    </div>
+
+                    <span class="live-badge">
+                        LIVE
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     DEMO SCENARIOS
+                ================================================== -->
+
+                <div class="demo-section">
+
+                    <div class="demo-section-title">
+
+                        <span>
+                            QUICK DEMO
+                        </span>
+
+                        <small>
+                            Load a realistic transaction scenario
+                        </small>
+
+                    </div>
+
+
+                    <div class="demo-buttons">
+
+
+                        <!-- SAFE -->
+
+                        <button
+                            type="button"
+                            class="demo-button safe"
+                            data-scenario="SAFE"
+                        >
+
+                            <span class="demo-icon">
+                                ✓
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Safe Payment
+                                </strong>
+
+                                <small>
+                                    Known customer
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- REVIEW -->
+
+                        <button
+                            type="button"
+                            class="demo-button review"
+                            data-scenario="REVIEW"
+                        >
+
+                            <span class="demo-icon">
+                                !
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Review Case
+                                </strong>
+
+                                <small>
+                                    Borderline fraud risk
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- HIGH VALUE -->
+
+                        <button
+                            type="button"
+                            class="demo-button"
+                            data-scenario="HIGH_VALUE"
+                        >
+
+                            <span class="demo-icon">
+                                ₹
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    High Value
+                                </strong>
+
+                                <small>
+                                    Unusual amount
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- NEW LOCATION -->
+
+                        <button
+                            type="button"
+                            class="demo-button"
+                            data-scenario="NEW_LOCATION"
+                        >
+
+                            <span class="demo-icon">
+                                ⌖
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    New Location
+                                </strong>
+
+                                <small>
+                                    Unfamiliar customer location
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- LOCATION CHANGE -->
+
+                        <button
+                            type="button"
+                            class="demo-button"
+                            data-scenario="LOCATION_CHANGE"
+                        >
+
+                            <span class="demo-icon">
+                                ↔
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Location Change
+                                </strong>
+
+                                <small>
+                                    Location changed from previous
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- HIGH VELOCITY -->
+
+                        <button
+                            type="button"
+                            class="demo-button"
+                            data-scenario="HIGH_VELOCITY"
+                        >
+
+                            <span class="demo-icon">
+                                ↯
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    High Velocity
+                                </strong>
+
+                                <small>
+                                    Multiple transactions quickly
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- NETWORK RISK -->
+
+                        <button
+                            type="button"
+                            class="demo-button"
+                            data-scenario="NETWORK_RISK"
+                        >
+
+                            <span class="demo-icon">
+                                ◉
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Network Risk
+                                </strong>
+
+                                <small>
+                                    Shared entity relationships
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+
+                        <!-- HIGH RISK -->
+
+                        <button
+                            type="button"
+                            class="demo-button block"
+                            data-scenario="HIGH_RISK"
+                        >
+
+                            <span class="demo-icon">
+                                ×
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Fraud Attack
+                                </strong>
+
+                                <small>
+                                    Multiple risk signals
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TRANSACTION FORM
+                ================================================== -->
+
+                <form id="risk-form">
+
+
+                    <!-- AMOUNT -->
+
+                    <div class="form-group">
+
+                        <label for="amount">
+                            Transaction Amount
+                        </label>
+
+                        <div class="input-prefix">
+
+                            <span>
+                                ₹
+                            </span>
+
+                            <input
+                                id="amount"
+                                type="number"
+                                min="1"
+                                step="0.01"
+                                value="45000"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUSTOMER HISTORY -->
+
+                    <div class="form-group">
+
+                        <label for="amount-history">
+                            Amount vs Customer History
+                        </label>
+
+                        <div class="input-suffix">
+
+                            <input
+                                id="amount-history"
+                                type="number"
+                                min="0"
+                                step="any"
+                                value="7.5"
+                                required
+                            >
+
+                            <span>
+                                ×
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         LOCATION
+                    ================================================== -->
+
+                    <div class="form-row">
+
+
+                        <!-- NEW LOCATION -->
+
+                        <div class="form-group">
+
+                            <label for="new-location">
+                                New Location
+                            </label>
+
+                            <select id="new-location">
+
+                                <option value="0">
+                                    No
+                                </option>
+
+                                <option
+                                    value="1"
+                                    selected
+                                >
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- LOCATION CHANGE -->
+
+                        <div class="form-group">
+
+                            <label for="location-change">
+                                Location Changed
+                            </label>
+
+                            <select id="location-change">
+
+                                <option value="0">
+                                    No
+                                </option>
+
+                                <option
+                                    value="1"
+                                    selected
+                                >
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         IP / DEVICE
+                    ================================================== -->
+
+                    <div class="form-row">
+
+
+                        <!-- IP CUSTOMERS -->
+
+                        <div class="form-group">
+
+                            <label for="ip-customers">
+                                IP — Customers
+                            </label>
+
+                            <input
+                                id="ip-customers"
+                                type="number"
+                                min="0"
+                                value="5"
+                            >
+
+                        </div>
+
+
+
+                        <!-- DEVICE CUSTOMERS -->
+
+                        <div class="form-group">
+
+                            <label for="device-customers">
+                                Device — Customers
+                            </label>
+
+                            <input
+                                id="device-customers"
+                                type="number"
+                                min="0"
+                                value="4"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         VELOCITY
+                    ================================================== -->
+
+                    <div class="form-row">
+
+
+                        <!-- 1 HOUR -->
+
+                        <div class="form-group">
+
+                            <label for="velocity-1h">
+                                Transactions — 1 Hour
+                            </label>
+
+                            <input
+                                id="velocity-1h"
+                                type="number"
+                                min="0"
+                                value="7"
+                            >
+
+                        </div>
+
+
+
+                        <!-- 24 HOURS -->
+
+                        <div class="form-group">
+
+                            <label for="velocity-24h">
+                                Transactions — 24 Hours
+                            </label>
+
+                            <input
+                                id="velocity-24h"
+                                type="number"
+                                min="0"
+                                value="12"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         TIME / HIGH VALUE
+                    ================================================== -->
+
+                    <div class="form-row">
+
+
+                        <!-- HOUR -->
+
+                        <div class="form-group">
+
+                            <label for="hour">
+                                Hour of Day
+                            </label>
+
+                            <input
+                                id="hour"
+                                type="number"
+                                min="0"
+                                max="23"
+                                value="3"
+                            >
+
+                        </div>
+
+
+
+                        <!-- HIGH VALUE -->
+
+                        <div class="form-group">
+
+                            <label for="high-value">
+                                High Value
+                            </label>
+
+                            <select id="high-value">
+
+                                <option value="0">
+                                    No
+                                </option>
+
+                                <option
+                                    value="1"
+                                    selected
+                                >
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         ANALYZE BUTTON
+                    ================================================== -->
+
+                    <button
+                        id="analyze-button"
+                        class="analyze-button"
+                        type="submit"
+                    >
+
+                        <span>
+                            Analyze Transaction
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESULT PANEL
+            ================================================== -->
+
+            <div class="panel result-panel">
+
+
+                <!-- PANEL HEADER -->
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            AI DECISION
+                        </p>
+
+                        <h3>
+                            Risk Assessment
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        id="result-status"
+                        class="result-status"
+                    >
+                        Waiting
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RISK SCORE
+                ================================================== -->
+
+                <div class="risk-score-container">
+
+                    <div
+                        id="risk-score-circle"
+                        class="risk-score-circle"
+                    >
+
+                        <div>
+
+                            <span
+                                id="risk-score"
+                                class="risk-score"
+                            >
+                                —
+                            </span>
+
+                            <span class="risk-percent">
+                                %
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="risk-summary">
+
+                        <div
+                            id="risk-level"
+                            class="risk-level"
+                        >
+                            Awaiting transaction
+                        </div>
+
+                        <div
+                            id="decision"
+                            class="decision"
+                        >
+                            —
+                        </div>
+
+                        <p>
+                            AI-generated fraud probability
+                            based on behavioral and
+                            temporal risk signals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     DECISION EXPLANATION
+                ================================================== -->
+
+                <div class="explanation-section">
+
+                    <div class="section-title">
+
+                        <span>
+                            WHY THIS DECISION?
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="reasons"
+                        class="reasons"
+                    >
+
+                        <div class="empty-state">
+                            Analyze a transaction to
+                            see the AI explanation.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RISK POLICY
+                ================================================== -->
+
+                <div class="threshold-section">
+
+                    <div class="section-title">
+
+                        <span>
+                            RISK POLICY
+                        </span>
+
+                    </div>
+
+
+                    <div class="risk-bar">
+
+                        <div
+                            class="risk-marker allow-marker"
+                            style="left: 12.5%"
+                        ></div>
+
+                        <div
+                            class="risk-marker block-marker"
+                            style="left: 25%"
+                        ></div>
+
+                        <div
+                            id="current-marker"
+                            class="current-marker"
+                            style="left: 0%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="threshold-labels">
+
+                        <span>
+
+                            ALLOW
+
+                            <small>
+                                &lt;12.5%
+                            </small>
+
+                        </span>
+
+
+                        <span>
+
+                            REVIEW
+
+                            <small>
+                                12.5–25%
+                            </small>
+
+                        </span>
+
+
+                        <span>
+
+                            BLOCK
+
+                            <small>
+                                ≥25%
+                            </small>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             RISK SIGNALS SECTION
+        ================================================== -->
+
+        <section
+            id="signals-section"
+            class="page-section"
+        >
+
+            <div class="panel">
+
+
+                <!-- PANEL HEADER -->
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            SIGNAL MONITORING
+                        </p>
+
+                        <h3>
+                            Risk Signals
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SIGNAL GRID
+                ================================================== -->
+
+                <div class="signals-grid">
+
+
+                    <!-- CUSTOMER -->
+
+                    <div class="signal-card">
+
+                        <strong>
+                            Customer Behavior
+                        </strong>
+
+                        <span>
+                            Amount deviation,
+                            transaction velocity
+                            and historical behavior.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- DEVICE -->
+
+                    <div class="signal-card">
+
+                        <strong>
+                            Device Intelligence
+                        </strong>
+
+                        <span>
+                            Device reuse and
+                            customer associations.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- IP -->
+
+                    <div class="signal-card">
+
+                        <strong>
+                            IP Intelligence
+                        </strong>
+
+                        <span>
+                            Shared IP activity and
+                            connected customers.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- NETWORK -->
+
+                    <div class="signal-card">
+
+                        <strong>
+                            Network Risk
+                        </strong>
+
+                        <span>
+                            Network connections,
+                            device/IP relationships
+                            and prior transaction activity.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- LOCATION -->
+
+                    <div class="signal-card">
+
+                        <strong>
+                            Location Risk
+                        </strong>
+
+                        <span>
+                            New locations and
+                            location changes.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- TEMPORAL -->
+
+                    <div class="signal-card">
+
+                        <strong>
+                            Temporal Risk
+                        </strong>
+
+                        <span>
+                            Time-of-day and
+                            transaction velocity.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DECISION HISTORY SECTION
+        ================================================== -->
+
+        <section
+            id="history-section"
+            class="page-section"
+        >
+
+            <div class="panel history-panel">
+
+
+                <!-- PANEL HEADER -->
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            AUDIT TRAIL
+                        </p>
+
+                        <h3>
+                            Decision History
+                        </h3>
+
+                        <p class="panel-description">
+                            Recent AI-generated risk decisions
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="refresh-history"
+                        type="button"
+                        class="secondary-button"
+                    >
+                        Refresh
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     HISTORY STATISTICS
+                ================================================== -->
+
+                <div class="history-stats">
+
+
+                    <div class="history-stat">
+
+                        <span>
+                            Total Decisions
+                        </span>
+
+                        <strong id="history-total">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="history-stat">
+
+                        <span>
+                            Allowed
+                        </span>
+
+                        <strong id="history-allowed">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="history-stat">
+
+                        <span>
+                            Reviews
+                        </span>
+
+                        <strong id="history-review">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="history-stat">
+
+                        <span>
+                            Blocked
+                        </span>
+
+                        <strong id="history-blocked">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     EMPTY STATE
+                ================================================== -->
+
+                <div
+                    id="history-empty"
+                    class="empty-state"
+                >
+                    No transactions analyzed yet.
+                </div>
+
+
+
+                <!-- =================================================
+                     HISTORY TABLE
+                ================================================== -->
+
+                <div
+                    id="history-table-container"
+                    class="history-table-container"
+                    hidden
+                >
+
+                    <table class="history-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Time
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                                <th>
+                                    Risk
+                                </th>
+
+                                <th>
+                                    Level
+                                </th>
+
+                                <th>
+                                    Decision
+                                </th>
+
+                                <th>
+                                    Signals
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="history-table-body"
+                        >
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            <span>
+                RazorShield AI
+            </span>
+
+            <span>
+                Temporal validation &amp; fraud detection
+            </span>
+
+            <span>
+                Risk decisions are model-generated
+            </span>
+
+            <span>
+                Defense-only system: scores, explains,
+                and recommends transaction holds; it does
+                not generate, simulate, or output material
+                intended to commit fraud or evade detection.
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="script.js?v=3"></script>
+
+
+</body>
+
+</html>

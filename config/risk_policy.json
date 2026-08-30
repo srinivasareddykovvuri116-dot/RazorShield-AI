@@ -1,0 +1,17 @@
+{
+    "risk_thresholds": {
+        "allow_max": 0.125,
+        "review_max": 0.250
+    },
+    "decisions": {
+        "allow": "ALLOW",
+        "review": "REVIEW",
+        "block": "BLOCK"
+    },
+    "risk_levels": {
+        "low": "LOW",
+        "medium": "MEDIUM",
+        "high": "HIGH",
+        "critical": "CRITICAL"
+    }
+}
